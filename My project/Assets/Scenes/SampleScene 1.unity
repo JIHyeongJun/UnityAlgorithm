@@ -163,7 +163,9 @@ MonoBehaviour:
   startOnEnable: 1
   startOnEnableDelay: 1
   loop: 1
-  shotList: []
+  shotList:
+  - shotObj: {fileID: 1987295814}
+    afterDelay: 0.1
   updateStep: 0
 --- !u!65 &328113839
 BoxCollider:
@@ -600,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d133c0ff89f04f4c9e5464a53cfd5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 7763286600154654, guid: 306d47aa1146fb643bdac4393c308918, type: 3}
   projectileNum: 150
   projectileSpeed: 3
   accelerationSpeed: 0
