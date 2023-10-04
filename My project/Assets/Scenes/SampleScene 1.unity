@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 178225388}
   - component: {fileID: 178225389}
-  - component: {fileID: 178225390}
   m_Layer: 0
   m_Name: WavingShot
   m_TagString: Untagged
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178225387}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a4e04a9565fe64daf77ada8fc08ce2, type: 3}
   m_Name: 
@@ -188,38 +187,6 @@ MonoBehaviour:
   waveSpeed: 6
   betweenAngle: 45
   nextLineDelay: 0.05
---- !u!114 &178225390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178225387}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a4e04a9565fe64daf77ada8fc08ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  projectileNum: 10
-  projectileSpeed: 2
-  accelerationSpeed: 0
-  useMaxSpeed: 0
-  maxSpeed: 0
-  useMinSpeed: 0
-  minSpeed: 0
-  accelerationTurn: 0
-  usePauseAndResume: 0
-  pauseTime: 0
-  resumeTime: 0
-  useAutoRelease: 0
-  autoReleaseTime: 10
-  wayNum: 4
-  waveCenterAngle: 180
-  waveRangeSize: 40
-  waveSpeed: 5
-  betweenAngle: 5
-  nextLineDelay: 0.1
 --- !u!1 &328113837
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shooting: 1
-  axisMove: 0
+  axisMove: 1
   inheritAngle: 0
   startOnAwake: 1
   startOnAwakeDelay: 1
@@ -263,9 +230,13 @@ MonoBehaviour:
   shotList:
   - shotObj: {fileID: 1987295814}
     afterDelay: 0.1
-  - shotObj: {fileID: 1987295814}
+  - shotObj: {fileID: 487483532}
     afterDelay: 0.1
   - shotObj: {fileID: 178225389}
+    afterDelay: 0.1
+  - shotObj: {fileID: 1278347429}
+    afterDelay: 0.1
+  - shotObj: {fileID: 2015477997}
     afterDelay: 0.1
   updateStep: 0
 --- !u!65 &328113839
@@ -346,6 +317,8 @@ Transform:
   - {fileID: 1987295813}
   - {fileID: 487483530}
   - {fileID: 178225388}
+  - {fileID: 1278347427}
+  - {fileID: 2015477999}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -359,7 +332,6 @@ GameObject:
   m_Component:
   - component: {fileID: 487483530}
   - component: {fileID: 487483532}
-  - component: {fileID: 487483531}
   m_Layer: 0
   m_Name: ShotMulti
   m_TagString: Untagged
@@ -382,36 +354,6 @@ Transform:
   m_Father: {fileID: 328113842}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &487483531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487483529}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113af7b7759ec5944ae18da5952dadc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  projectileNum: 10
-  projectileSpeed: 2
-  accelerationSpeed: 0
-  useMaxSpeed: 0
-  maxSpeed: 0
-  useMinSpeed: 0
-  minSpeed: 0
-  accelerationTurn: 0
-  usePauseAndResume: 0
-  pauseTime: 0
-  resumeTime: 0
-  useAutoRelease: 0
-  autoReleaseTime: 10
-  spiralWayNum: 4
-  startAngle: 180
-  shiftAngle: 10
-  betweenDealy: 0.2
 --- !u!114 &487483532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,7 +361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487483529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 113af7b7759ec5944ae18da5952dadc3, type: 3}
   m_Name: 
@@ -665,6 +607,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1278347426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278347427}
+  - component: {fileID: 1278347429}
+  m_Layer: 0
+  m_Name: NwayShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278347427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278347426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328113842}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278347429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278347426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b56041c4068fa04c850849ae97497f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7763286600154654, guid: 306d47aa1146fb643bdac4393c308918, type: 3}
+  projectileNum: 200
+  projectileSpeed: 20
+  accelerationSpeed: 0
+  useMaxSpeed: 0
+  maxSpeed: 0
+  useMinSpeed: 0
+  minSpeed: 0
+  accelerationTurn: 0
+  usePauseAndResume: 0
+  pauseTime: 0
+  resumeTime: 0
+  useAutoRelease: 0
+  autoReleaseTime: 10
+  wayNum: 18
+  centerAngle: 180
+  betweenAngle: 20
+  nextLineDelay: 0.1
 --- !u!1 &1359697293
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987295812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d133c0ff89f04f4c9e5464a53cfd5c0, type: 3}
   m_Name: 
@@ -815,3 +819,68 @@ MonoBehaviour:
   startAngle: 180
   shiftAngle: 20
   betweenDealy: 0.2
+--- !u!1 &2015477996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015477999}
+  - component: {fileID: 2015477997}
+  m_Layer: 0
+  m_Name: NwayWaveShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2015477997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015477996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dda4af05a7fe0846bf2c6cc7d28d2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7763286600154654, guid: 306d47aa1146fb643bdac4393c308918, type: 3}
+  projectileNum: 200
+  projectileSpeed: 20
+  accelerationSpeed: 0
+  useMaxSpeed: 0
+  maxSpeed: 0
+  useMinSpeed: 0
+  minSpeed: 0
+  accelerationTurn: 0
+  usePauseAndResume: 0
+  pauseTime: 0
+  resumeTime: 0
+  useAutoRelease: 0
+  autoReleaseTime: 10
+  wayNum: 16
+  centerAngle: 180
+  waveRangeSize: 120
+  waveSpeed: 50
+  waveInverse: 0
+  betweenAngle: 10
+  nextLineDelay: 0.1
+--- !u!4 &2015477999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015477996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328113842}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
